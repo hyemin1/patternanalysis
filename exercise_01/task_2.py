@@ -38,7 +38,7 @@ u_data = sorted(u_data)
 #u_crr for indexing u_data
 u_crr=0
 
-#loop through CDG
+#loop through CDF
 for x in range(len(raccoon_cdf)):
     #if we checked all values in u_data, end loop
     if u_crr==len(u_data):
