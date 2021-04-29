@@ -12,6 +12,7 @@ This is an addition to task 2:
 - 1. We generate  10.000, 50.000, 100.000, 200.000, and 400.000 samples from the racoon image and do not access the original racoon image anymore.
 - 2. Then reconstruct the image with the Parzen Window Estimator the sampling the densities  for each of the five previously generated data sets.
 - 3. Plot the output comprising of the density we got from the Parzen window estimator.
+- 4. Play with window size h and answer question: What do you observe when you vary the window size of the Parzen estimator? => TODO
 
 This is how the Parzen estimator works:
 whole density: p(x) = 1/N sum(i=1..N) [(1/h^D)*k* ((x - x_i)/h)]
