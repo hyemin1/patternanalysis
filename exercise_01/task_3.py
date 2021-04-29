@@ -85,6 +85,8 @@ def parzen_reconstruct (input):
 
 
 
+
+# reconstruct images from 10k, 50k, 100k, 200k and 400k samples using the Parzen window estimator
 recon10k = parzen_reconstruct(racoon_sample (10000))
 recon50k = parzen_reconstruct(racoon_sample (50000))
 recon100k = parzen_reconstruct(racoon_sample (100000))
@@ -93,8 +95,7 @@ recon400k = parzen_reconstruct(racoon_sample (400000))
 
 
 
-
-#reshape array to 2-D
+#reshape array to 2D
 output10k=np.reshape(recon10k,(768,1024))
 output50k=np.reshape(recon50k,(768,1024))
 output100k=np.reshape(recon100k,(768,1024))
@@ -104,5 +105,5 @@ output400k=np.reshape(recon400k,(768,1024))
 
 #display
 plt.figure()
-plt.imshow(output400k)
+plt.imshow(output400k) # multi plot....
 plt.show()
