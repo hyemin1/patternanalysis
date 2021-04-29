@@ -90,7 +90,7 @@ def parzen_reconstruct (input):
 recon10k = parzen_reconstruct(racoon_sample (10000))
 recon50k = parzen_reconstruct(racoon_sample (50000))
 recon100k = parzen_reconstruct(racoon_sample (100000))
-recon200k = parzen_reconstruct(racoon_sample (20000))
+recon200k = parzen_reconstruct(racoon_sample (200000))
 recon400k = parzen_reconstruct(racoon_sample (400000))
 
 
