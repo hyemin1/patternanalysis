@@ -9,7 +9,7 @@ from sklearn import preprocessing as pre
 ####################
 """
 This is an addition to task 2:
-- 1. We have generate  10.000, 50.000, 100.000, 200.000, and 400.000 samples from the racoon image and do not access the original racoon image anymore.
+- 1. We generate  10.000, 50.000, 100.000, 200.000, and 400.000 samples from the racoon image and do not access the original racoon image anymore.
 - 2. Then reconstruct the image with the Parzen Window Estimator the sampling the densities  for each of the five previously generated data sets.
 - 3. Plot the output comprising of the density we got from the Parzen window estimator.
 
@@ -88,7 +88,7 @@ recon10k = parzen_reconstruct(racoon_sample (10000))
 recon50k = parzen_reconstruct(racoon_sample (50000))
 recon100k = parzen_reconstruct(racoon_sample (100000))
 recon200k = parzen_reconstruct(racoon_sample (20000))
-recon500k = parzen_reconstruct(racoon_sample (400000))
+recon400k = parzen_reconstruct(racoon_sample (400000))
 
 
 
@@ -98,10 +98,10 @@ output10k=np.reshape(recon10k,(768,1024))
 output50k=np.reshape(recon50k,(768,1024))
 output100k=np.reshape(recon100k,(768,1024))
 output200k=np.reshape(recon200k,(768,1024))
-output500k=np.reshape(recon500k,(768,1024))
+output400k=np.reshape(recon400k,(768,1024))
 
 
 #display
 plt.figure()
-plt.imshow(output500k)
+plt.imshow(output400k)
 plt.show()
