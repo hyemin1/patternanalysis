@@ -43,9 +43,9 @@ bestEvaluation = -1
 for h in range(5 to 50):
     evaluation = evaluateReconstruction (parzen_reconstruct (standardSample, h))
     if (bestWindowSize < 0 or bestEvaluation > evaluation):
-      bestWindwoSize = h
+      bestWindowSize = h
       bestEvaluation = evaluation
       
 
- print ("optimal window size for parson estimation with racoon image: " + str(bestWindowSize))
+ print ("optimal window size for parson estimator with racoon image: " + str(bestWindowSize))
     
