@@ -6,7 +6,6 @@ import numpy as np
 from sklearn import preprocessing as pre
 
 
-
 #########
 """ 
 task 4: use code from task 3 and find the optimal windows size h
