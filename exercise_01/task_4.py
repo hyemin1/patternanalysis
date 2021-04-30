@@ -13,7 +13,7 @@ task 4: use code from task 3 and find the optimal windows size h
   - recontruct the image with the Parzen Window Estimator and different window sizes h
   - evaluate and quantify how well this worked for a certain window size h
   - try out different window sizes and find the optimal value
-  - want to check: does h depend so sample size => possibly no, but we want to test it.
+  - want to check: does h depend on sample size => possibly no, but we want to test it.
 """
 #########
 
