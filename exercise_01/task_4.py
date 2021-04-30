@@ -23,14 +23,14 @@ def evaluateReconstruction (reconstruction):
   # quantifies how well the image has been reconstructed for a certain window size
   # for this, we use cross-correlation:
   #     how cross-validation works
-	#         -split samples S into
-	#	            - a test set S_j of size N/k
-	#	            - a training set T_j
-	#         -build a tensity p(x)_Theta^j from T_j
-	#	            -Theta: candidate kernel size (h?)
-	#         - choose the best Theta with ML estimation across all folds with
-	#	            -Theta = argmax_Theta sum [log p(x)_Theta^j] on all x € T_j across all folds j
-	#         -make sure to split samples randomly between folds!
+  #         -split samples S into
+  #	            - a test set S_j of size N/k
+  #	            - a training set T_j
+  #         -build a tensity p(x)_Theta^j from T_j
+  #	            -Theta: candidate kernel size (h?)
+  #         - choose the best Theta with ML estimation across all folds with
+  #	            -Theta = argmax_Theta sum [log p(x)_Theta^j] on all x € T_j across all folds j
+  #         -make sure to split samples randomly between folds!
   
   return -1.23
 
