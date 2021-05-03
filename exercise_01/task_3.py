@@ -120,12 +120,12 @@ def parzen_reconstruct (input, windowSize):
         # now we calculate the box value and iterate over all samples within the hyperbox - this covers the Psi part of the equation
         boxValue = 0
         for i in range (windowLeft, windowRight + 1):
-            boxValue += input[i] * (boxCenter - i) / currentWindowSize ### PLEASE CHECK: do we need to multiply this with input[i]? Somehow we need to get in the grayscale values. Feels right but I can't find this in the formula.
+            boxValue += (boxCenter - i) / currentWindowSize ### PLEASE CHECK: do we need to multiply this with input[i]? Somehow we need to get in the grayscale values. Feels right but I can't find this in the formula.
             #boxValue += (boxCenter - i) / currentWindowSize
 
         # now we assign the box value to all the points within the current window
         for i in range (windowLeft, windowRight + 1):
-            output[i] = boxValue
+            output[i] = boxValue*input[i]
 
 
         windowLeft += h #  for the next iteration
