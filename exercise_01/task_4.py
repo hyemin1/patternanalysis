@@ -173,13 +173,15 @@ def checkReconstructionResult (originalImage, reconstructedImage):
     width = len(reconstructedImage[0])  # 1024
 
     result = 0.
+    s = 0
 
-    for s in range (0, samples):
-        x = np.random.randint(0, height-1)
-        y = np.random.randint (0, width-1)
-        result += float(abs(originalImage[x][y] - reconstructedImage[x][y]))/255.
 
-    return result / float(samples)
+    for x in range(0, height):
+        for y in range (0, width):
+            result += float(abs(originalImage[x][y] - reconstructedImage[x][y]))/255.
+            s+=1
+
+    return result / float(s)
 
 
 
@@ -210,7 +212,7 @@ for s in range(0, len(sampleSizes)):
     hValues = []
     qValues = []
 
-    while (windowSize < 50):
+    while (windowSize < 75):
         print ("samples=" + str(sampleSizes[s]) + "   h=" + str(windowSize))
         sampledImage = sampledImage0.copy()
         reconstructedImage = parzen_reconstruct(sampledImage, windowSize)
