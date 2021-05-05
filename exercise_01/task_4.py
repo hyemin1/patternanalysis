@@ -167,7 +167,7 @@ def checkReconstructionResult (originalImage, reconstructedImage):
     # the higher the number returned, the more the reconstructed image deviates from the original image
     # this could be, iter alia, due to overfitting and unterfitting
 
-    samples = 10000 # should be enough and still fast to calculate
+    samples = 1000000 # should be enough and still fast to calculate
 
     height = len(reconstructedImage)  # 768
     width = len(reconstructedImage[0])  # 1024
@@ -184,7 +184,7 @@ def checkReconstructionResult (originalImage, reconstructedImage):
 
 
 
-sampleSizes = (10000, 50000, 100000, 200000, 400000)
+sampleSizes = (50000, 200000, 400000)
 
 
 originalImage = gaussian_filter(scipy.misc.face(gray=True), sigma=3)
@@ -210,11 +210,11 @@ for s in range(0, len(sampleSizes)):
     hValues = []
     qValues = []
 
-    while (windowSize < 30):
+    while (windowSize < 50):
         print ("samples=" + str(sampleSizes[s]) + "   h=" + str(windowSize))
         sampledImage = sampledImage0.copy()
         reconstructedImage = parzen_reconstruct(sampledImage, windowSize)
-        windowSize += max(1, int(float(windowSize)*0.2))
+        windowSize += max(2, int(float(windowSize)*0.3))
 
         fitquality = checkReconstructionResult(originalImage, reconstructedImage)
 
