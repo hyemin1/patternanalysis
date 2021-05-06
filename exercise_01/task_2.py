@@ -1,9 +1,17 @@
 import scipy.misc
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter
-import bisect as bin
 import numpy as np
-from sklearn import preprocessing as pre
+
+"""
+1. load and display a racoon image.
+2. do random sampling using CDF(Cummulative Density Function)
+"""
+
+
+"""
+1. load and display a racoon image.
+"""
 
 # load the racoon image
 raccoon = scipy.misc.face(gray=True)
@@ -17,13 +25,17 @@ plt.imshow(raccoon)
 plt.axis('off')
 plt.show()
 
-# convert 2D array to 1D
+
+
+"""
+2. do random sampling using CDF(Cummulative Density Function)
+"""
+# convert 2D raccoon array to 1D
 raccoon = raccoon.flatten()
 # compute CDF
 raccoon_cdf = raccoon.cumsum()
+
 #normalization skipped
-
-
 # compute sampled array
 # output array (1-D)
 output= [0]*len(raccoon_cdf)
@@ -38,7 +50,7 @@ u_data = sorted(u_data)
 #u_crr for indexing u_data
 u_crr=0
 
-#loop through CDF
+#loop through CDG
 for x in range(len(raccoon_cdf)):
     #if we checked all values in u_data, end loop
     if u_crr==len(u_data):
@@ -56,4 +68,3 @@ plt.figure()
 plt.imshow(output)
 
 plt.show()
-
