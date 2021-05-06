@@ -14,8 +14,6 @@ Task 4: Now we want to find the best window Size h for the Parzen Window Estimat
         overfitting (small h, high N) and underfitting (high h, small N) and want to demonstrate this effect.
 
 """
-
-
 ####################
 
 
