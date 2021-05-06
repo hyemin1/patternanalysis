@@ -1,6 +1,13 @@
 import numpy as np
 import matplotlib.pyplot  as plt
+"""
+1. display a histogram with normally distributed data samples.
+2. display a gaussian curve
+"""
 
+"""
+1.display a histogram with normally distributed data samples.
+"""
 #mean
 mean = 1
 #standard deviation
@@ -18,6 +25,10 @@ x,bin_data,others=plt.hist(data,bin_num)
 #display histogram
 plt.show()
 
+
+"""
+2. display a gaussian curve
+"""
 #gaussian equation: (1/(deviation*root(2pi)))*exp(-(x-mean)^2/(2*deviation^2))
 #plot gaussian curve
 plt.plot(1/(deviation*np.sqrt(2*np.pi))*np.exp(-((bin_data-mean)**2)/(2*deviation**2)),color='r')
