@@ -4,14 +4,14 @@ from scipy.ndimage import gaussian_filter
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
-###################
+##################
 """
 exercise 2, task 1
 1. foreground: load raccoon &do random sampling
 2. background: create background image using uniform distribution
 3. apply random forest regression
 """
-###################
+##################
 
 #load raccoon image
 def load_raccoon():
