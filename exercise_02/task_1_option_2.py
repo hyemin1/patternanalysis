@@ -31,7 +31,7 @@ def create_background(raccoon):
 #do random forest regression
 def randomregression(foreground,background):
     #create traingin & test sets
-    trainX, testX, trainY, testY = train_test_split(background, foreground)
+    trainX, testX, trainY, testY = train_test_split(background, foreground,train_size=0.6)
     #do random forest regression
     #set regressor
     reg = RandomForestRegressor(n_estimators=20, max_depth=10)
@@ -95,14 +95,14 @@ main
 #load raccoon image
 foreground= load_raccoon()
 #do random sampling
-foreground=raccoon_sample(500000,foreground)
+foreground=raccoon_sample(200000,foreground)
 #display
 plotImage(foreground,"foreground image")
 #background
 #create background array
 background = create_background(foreground)
 #do random sampling
-background = raccoon_sample(500000,background)
+background = raccoon_sample(200000,background)
 #display
 plotImage(background,"background image")
 #do random forest regression & display
