@@ -2,7 +2,9 @@
 Pattern Analysis, 2021 Summer Semester, FAU
 
 
+
 exercise_01
+
 task 1- warm up
 Display a histogram with normally distributed data samples and a gaussian curve
 
