@@ -21,12 +21,14 @@ task4-optimal Parzen Window Size
 
 
 
+
 exercise_02: Random Tree & Extra Tree Regression
-Task 1:
+
+task 1:
 - add unifrom distribution to background
 - fit the regression model using random forest
 
-Task 2:
+task 2:
 - try to fit the model with extra tree regressor
 
 - Extra Tree Regressor gives better result than Random Tree Regressor
