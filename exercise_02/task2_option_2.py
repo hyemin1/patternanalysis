@@ -101,9 +101,10 @@ plotImage(foreground,"foreground image")
 #background
 #create background array
 background = create_background(foreground)
+background=background+foreground
 #do random sampling
 background = raccoon_sample(200000,background)
 #display
-plotImage(background,"background image")
+plotImage(background,"background added image")
 #do random forest regression & display
 randomregression(foreground,background)
