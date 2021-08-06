@@ -47,3 +47,12 @@ task1: Find the best number k for K-means Clustering
 - S_k+1=S_k * root(1+1/(number of total uniform clusters))
 - in our experiment: 5 Gaussian&20 Uniform Clusters with 500 data points per set. 
 - best choice of k: 5
+
+
+exercise_04: Dimensionality Reduction
+task1: aplly several dimensionality reduction methods to data sets
+- generate circles & swiss rolls
+- apply PCA,MDS,ISOMAP,Laplacian Eigenmaps(LE)
+- in 2D data sets, ISOMAP and LE give poor results(instable outputs) since they are for higher dimensionalities.
+- in 3D data sets, all methods work.
+- MDS has in general slowest speed.
