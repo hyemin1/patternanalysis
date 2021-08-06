@@ -52,7 +52,7 @@ task1: Find the best number k for K-means Clustering
 
 exercise_04: Dimensionality Reduction
 
-task1: aplly several dimensionality reduction methods to data sets
+task1: apply several dimensionality reduction methods to data sets
 - generate circles & swiss rolls
 - apply PCA,MDS,ISOMAP,Laplacian Eigenmaps(LE)
 - in 2D data sets, ISOMAP and LE give poor results(instable outputs) since they are for higher dimensionalities.
