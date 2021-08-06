@@ -35,3 +35,15 @@ task 2:
 - Reason: Extra Tree Regressor contains split subtress randomly and doesn't contain bootstrapping, but Random Tree Regressor chooses the best subtree and does bootstrapping computation. 
 - As Extra Tree Regressor does more random computation, the result has less variance than that of Random Tree Regressor.
 - The result also depends on hyper parameters like maximum depth of tree, number of estimators, etc.
+
+
+
+exercise_03: K-Means & Gap Statistics
+task1: Find the best number k for K-means Clustering
+- create gaussian distributed & uniform distributed clusters
+- calculate the gap between the uniform &gaussain distributed data points
+- find the best number of clusters using gap graph
+- Best k: Gap[k]>=Gap[k+1]-S_k+1
+- S_k+1=S_k * root(1+1/(number of total uniform clusters))
+- in our experiment: 5 Gaussian&20 Uniform Clusters with 500 data points per set. 
+- best choice of k: 5
