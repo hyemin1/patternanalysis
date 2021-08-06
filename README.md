@@ -39,6 +39,7 @@ task 2:
 
 
 exercise_03: K-Means & Gap Statistics
+
 task1: Find the best number k for K-means Clustering
 - create gaussian distributed & uniform distributed clusters
 - calculate the gap between the uniform &gaussain distributed data points
@@ -50,6 +51,7 @@ task1: Find the best number k for K-means Clustering
 
 
 exercise_04: Dimensionality Reduction
+
 task1: aplly several dimensionality reduction methods to data sets
 - generate circles & swiss rolls
 - apply PCA,MDS,ISOMAP,Laplacian Eigenmaps(LE)
