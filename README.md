@@ -58,3 +58,7 @@ task1: apply several dimensionality reduction methods to data sets
 - in 2D data sets, ISOMAP and LE give poor results(instable outputs) since they are for higher dimensionalities.
 - in 3D data sets, all methods work.
 - MDS has in general slowest speed.
+
+task2: MNIST Dimensionality Reduction
+- apply again the methods from task 1 at MNIST data sets
+- for 2d visualization, t-SNE is used 
